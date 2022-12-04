@@ -1,6 +1,11 @@
 @extends('frontend.layouts.apps')
 @section('content')
 
+<?php 
+
+    $related = App\Models\Post::where('category', $data->category)->get();
+?>
+
 <article id="post-18780" class="td-post-template-3 post-18780 post type-post status-publish format-standard has-post-thumbnail hentry category-dang-dep category-lam-dep category-meo-hay tag-cach-tang-can-nhanh tag-tang-can tag-tang-can-tang-co post-ftoc" itemscope itemtype="http://schema.org/Article">
     <div class="td-post-header td-container">
         <div class="td-crumb-container">
@@ -43,7 +48,7 @@
             <div class="td-pb-span8 td-main-content" role="main">
                 <div class="td-ss-main-content">
                     {!! $data->content   !!}
-                    <footer>
+                    <!-- <footer>
                         <div class="td-post-source-tags">
                             <ul class="td-tags td-post-small-box clearfix">
                                 <li><span>CHỦ ĐỀ</span></li>
@@ -95,7 +100,7 @@
                             <meta itemprop="width" content="690">
                             <meta itemprop="height" content="345">
                         </span>
-                    </footer>
+                    </footer> -->
                     <div class="td_block_wrap td_block_related_posts td_uid_4_637ae782d77bc_rand td_with_ajax_pagination td-pb-border-top"  data-td-block-uid="td_uid_4_637ae782d77bc" >
                         <script>var block_td_uid_4_637ae782d77bc = new tdBlock();
                             block_td_uid_4_637ae782d77bc.id = "td_uid_4_637ae782d77bc";
@@ -109,84 +114,25 @@
                             block_td_uid_4_637ae782d77bc.max_num_pages = "16";
                             tdBlocksArray.push(block_td_uid_4_637ae782d77bc);
                         </script>
-                        <h4 class="td-related-title"><a id="td_uid_5_637ae782e399e" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_4_637ae782d77bc" href="#">BÀI VIẾT LIÊN QUAN</a><a id="td_uid_6_637ae782e3a37" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_4_637ae782d77bc" href="#">XEM THÊM</a></h4>
+                        <h4 class="td-related-title"><a id="td_uid_5_637ae782e399e" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_4_637ae782d77bc" href="#">BÀI VIẾT LIÊN QUAN</a></h4>
                         <div id=td_uid_4_637ae782d77bc class="td_block_inner">
+                            
                             <div class="td-related-row">
+                                @if($related->count()>0)
+                                @foreach($related as $valss)
                                 <div class="td-related-span4">
                                     <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
                                         <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/an-nhieu-van-khong-tang-can/" rel="bookmark" title="Vì sao ăn nhiều vẫn không tăng cân? Giải pháp nào cho người gầy?"><img width="218" height="150" class="entry-thumb" src="/2019/02/an-nhieu-van-khong-tang-can-218x150.jpg" srcset="/2019/02/an-nhieu-van-khong-tang-can-218x150.jpg 218w, /2019/02/an-nhieu-van-khong-tang-can-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="an nhieu van khong tang can" title="Vì sao ăn nhiều vẫn không tăng cân? Giải pháp nào cho người gầy?"/></a></div>
-                                            <a href="http://www.khoedep.vn/lam-dep/dang-dep/" class="td-post-category">Dáng Đẹp</a>            
+                                            <div class="td-module-thumb"><a href="{{ route('details', $valss->link) }}" rel="bookmark" title="{{ $valss->title }}"><img width="218" height="150" class="entry-thumb" srcset="{{ asset($valss->image) }} 218w, {{ asset($valss->image) }} 100w" sizes="(max-width: 218px) 100vw, 218px" alt="{{ $valss->title }}" title="{{ $valss->title }}"/></a></div>
+                                            <a href="{{ route('details', $valss->link) }}" class="td-post-category">{{ $valss->title }}</a>            
                                         </div>
                                         <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/an-nhieu-van-khong-tang-can/" rel="bookmark" title="Vì sao ăn nhiều vẫn không tăng cân? Giải pháp nào cho người gầy?">Vì sao ăn nhiều vẫn không tăng cân? Giải pháp nào cho người gầy?</a></h3>
+                                            <h3 class="entry-title td-module-title"><a href="{{ route('details', $valss->link) }}" rel="bookmark" title="{{ $valss->title }}">{{ $valss->title }}</a></h3>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- ./td-related-span4 -->
-                                <div class="td-related-span4">
-                                    <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/cach-tang-can-bang-sua-dac/" rel="bookmark" title="Top 4 cách tăng cân bằng sữa đặc cực kỳ hiệu quả bạn đã thử chưa?"><img width="218" height="150" class="entry-thumb" src="/2018/02/cach-tang-can-bang-sua-dac-218x150.jpg" srcset="/2018/02/cach-tang-can-bang-sua-dac-218x150.jpg 218w, /2018/02/cach-tang-can-bang-sua-dac-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="cach tang can bang sua dac" title="Top 4 cách tăng cân bằng sữa đặc cực kỳ hiệu quả bạn đã thử chưa?"/></a></div>
-                                            <a href="http://www.khoedep.vn/meo-hay/" class="td-post-category">Mẹo Hay</a>            
-                                        </div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/cach-tang-can-bang-sua-dac/" rel="bookmark" title="Top 4 cách tăng cân bằng sữa đặc cực kỳ hiệu quả bạn đã thử chưa?">Top 4 cách tăng cân bằng sữa đặc cực kỳ hiệu quả bạn đã thử chưa?</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ./td-related-span4 -->
-                                <div class="td-related-span4">
-                                    <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/thoi-quen-ban-dem-lam-tang-can/" rel="bookmark" title="12 thói quen ban đêm làm tăng cân không phanh bạn cần phải biết"><img width="218" height="150" class="entry-thumb" src="/2017/12/thoi-quen-ban-dem-tang-can-218x150.jpg" srcset="/2017/12/thoi-quen-ban-dem-tang-can-218x150.jpg 218w, /2017/12/thoi-quen-ban-dem-tang-can-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="thoi quen ban dem tang can" title="12 thói quen ban đêm làm tăng cân không phanh bạn cần phải biết"/></a></div>
-                                            <a href="http://www.khoedep.vn/meo-hay/" class="td-post-category">Mẹo Hay</a>            
-                                        </div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/thoi-quen-ban-dem-lam-tang-can/" rel="bookmark" title="12 thói quen ban đêm làm tăng cân không phanh bạn cần phải biết">12 thói quen ban đêm làm tăng cân không phanh bạn cần phải biết</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ./td-related-span4 -->
-                            </div>
-                            <!--./row-fluid-->
-                            <div class="td-related-row">
-                                <div class="td-related-span4">
-                                    <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/le-vy-tang-can-tu-nhien/" rel="bookmark" title="Lê Vy &#8211; Công thức tăng cân tự nhiên và tập luyện khoa học cho nữ"><img width="218" height="150" class="entry-thumb" src="/2017/06/tang-can-tu-nhien-le-vy-218x150.jpg" srcset="/2017/06/tang-can-tu-nhien-le-vy-218x150.jpg 218w, /2017/06/tang-can-tu-nhien-le-vy-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="tang can tu nhien le vy" title="Lê Vy &#8211; Công thức tăng cân tự nhiên và tập luyện khoa học cho nữ"/></a></div>
-                                            <a href="http://www.khoedep.vn/tap-luyen/cau-chuyen-thanh-cong/" class="td-post-category">Câu chuyện thành công</a>            
-                                        </div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/le-vy-tang-can-tu-nhien/" rel="bookmark" title="Lê Vy &#8211; Công thức tăng cân tự nhiên và tập luyện khoa học cho nữ">Lê Vy &#8211; Công thức tăng cân tự nhiên và tập luyện khoa học cho nữ</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ./td-related-span4 -->
-                                <div class="td-related-span4">
-                                    <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/uong-nuoc-tang-can/" rel="bookmark" title="Uống nước nhiều có tăng cân hay không? Uống nước như thế nào?"><img width="218" height="150" class="entry-thumb" src="/2017/06/uong-nuoc-tang-can-218x150.jpg" srcset="/2017/06/uong-nuoc-tang-can-218x150.jpg 218w, /2017/06/uong-nuoc-tang-can-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="uong nuoc tang can" title="Uống nước nhiều có tăng cân hay không? Uống nước như thế nào?"/></a></div>
-                                            <a href="http://www.khoedep.vn/meo-hay/" class="td-post-category">Mẹo Hay</a>            
-                                        </div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/uong-nuoc-tang-can/" rel="bookmark" title="Uống nước nhiều có tăng cân hay không? Uống nước như thế nào?">Uống nước nhiều có tăng cân hay không? Uống nước như thế nào?</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ./td-related-span4 -->
-                                <div class="td-related-span4">
-                                    <div class="td_module_related_posts td-animation-stack td-meta-info-hide td_mod_related_posts">
-                                        <div class="td-module-image">
-                                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/tang-can-tang-co-le-dinh/" rel="bookmark" title="Bí quyết tăng cân tăng cơ gần 15kg với chế độ ăn sinh viên của 9x"><img width="218" height="150" class="entry-thumb" src="/2017/06/tang-can-tang-co-le-dinh-218x150.jpg" srcset="/2017/06/tang-can-tang-co-le-dinh-218x150.jpg 218w, /2017/06/tang-can-tang-co-le-dinh-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="tang can tang co le dinh" title="Bí quyết tăng cân tăng cơ gần 15kg với chế độ ăn sinh viên của 9x"/></a></div>
-                                            <a href="http://www.khoedep.vn/tap-luyen/cau-chuyen-thanh-cong/" class="td-post-category">Câu chuyện thành công</a>            
-                                        </div>
-                                        <div class="item-details">
-                                            <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/tang-can-tang-co-le-dinh/" rel="bookmark" title="Bí quyết tăng cân tăng cơ gần 15kg với chế độ ăn sinh viên của 9x">Bí quyết tăng cân tăng cơ gần 15kg với chế độ ăn sinh viên của 9x</a></h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- ./td-related-span4 -->
+                                @endforeach
+                                @endif
                             </div>
                             <!--./row-fluid-->
                         </div>

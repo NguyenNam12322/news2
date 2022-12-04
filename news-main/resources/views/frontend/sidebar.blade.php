@@ -26,6 +26,7 @@
 
                     <?php 
                         $featured = App\Models\post::where('active', 1)->where('featured', 1)->orderBy('id', 'asc')->take(3)->get();
+                        $postrandom = App\Models\post::where('active', 1)->inRandomOrder()->first();
                     ?>
 
                 @include('frontend.include.index', ['data' => $featured])
@@ -54,10 +55,10 @@
                 <div class="td-block-span12">
                     <div class="td_module_mx4 td_module_wrap td-animation-stack td-meta-info-hide">
                         <div class="td-module-image">
-                            <div class="td-module-thumb"><a href="http://www.khoedep.vn/steroid-la-gi/" rel="bookmark" title="Steroid là gì? Mọi thứ bạn cần biết về thuốc Steroid tăng cơ bắp"><img width="218" height="150" class="entry-thumb" src="/2017/04/steroid-la-gi-218x150.jpg" srcset="/2017/04/steroid-la-gi-218x150.jpg 218w, /2017/04/steroid-la-gi-100x70.jpg 100w" sizes="(max-width: 218px) 100vw, 218px" alt="steroid la gi" title="Steroid là gì? Mọi thứ bạn cần biết về thuốc Steroid tăng cơ bắp"/></a></div>
-                            <a href="http://www.khoedep.vn/tap-luyen/tang-can/" class="td-post-category">Tăng cân</a>            
+                            <div class="td-module-thumb"><a href="{{ route('details', $postrandom->link) }}" rel="bookmark" title="{{ $postrandom->title }}"><img width="218" height="150" class="entry-thumb" src="{{ asset($postrandom->image) }}" srcset="{{ asset($postrandom->image) }} 218w, {{ asset($postrandom->image) }} 100w" sizes="(max-width: 218px) 100vw, 218px" alt="steroid la gi" title="{{ $postrandom->title }}"/></a></div>
+                            <a href="{{ route('details', $postrandom->link) }}" class="td-post-category">{{ $postrandom->title }}</a>            
                         </div>
-                        <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/steroid-la-gi/" rel="bookmark" title="Steroid là gì? Mọi thứ bạn cần biết về thuốc Steroid tăng cơ bắp">Steroid là gì? Mọi thứ bạn cần biết về thuốc Steroid...</a></h3>
+                        <h3 class="entry-title td-module-title"><a href="{{ route('details', $postrandom->link) }}" rel="bookmark" title="{{ $postrandom->title }}">{{ $postrandom->title }}</a></h3>
                     </div>
                 </div>
                 
