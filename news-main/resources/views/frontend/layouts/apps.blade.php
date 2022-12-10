@@ -24,16 +24,16 @@
                 @endif
 
 
-                <link rel="pingback" href="http://www.khoedep.vn/xmlrpc.php" />
+                <!-- <link rel="pingback" href="http://www.khoedep.vn/xmlrpc.php" /> -->
                 <link rel="icon" type="image/png" href="http://static.khoedep.vn/2015/10/favicon.png">
                 <!-- This site is optimized with the Yoast SEO plugin v11.9 - https://yoast.com/wordpress/plugins/seo/ -->
                 
-                <link rel="canonical" href="http://www.khoedep.vn/" />
+                <!-- <link rel="canonical" href="http://www.khoedep.vn/" /> -->
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Khỏe Đẹp | Chuyên trang Sức Khỏe &amp; Làm Đẹp" />
                 <meta property="og:description" content="Khỏe Đẹp - Chuyên trang sức khỏe và làm đẹp toàn diện hàng đầu chia sẻ các bí quyết về dinh dưỡng, làm đẹp và luyện tập tốt nhất cho bạn cuộc sống hạnh phúc" />
-                <meta property="og:url" content="http://www.khoedep.vn/" />
+                <meta property="og:url" content="" />
                 <meta property="og:site_name" content="Khỏe Đẹp" />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:description" content="Khỏe Đẹp - Chuyên trang sức khỏe và làm đẹp toàn diện hàng đầu chia sẻ các bí quyết về dinh dưỡng, làm đẹp và luyện tập tốt nhất cho bạn cuộc sống hạnh phúc" />
