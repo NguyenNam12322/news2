@@ -1124,29 +1124,7 @@
                     
                     
                 </script>
-                <script>
-                    window.fbAsyncInit = function() {
-                      FB.init({
-                        appId            : '275816529606850',
-                        autoLogAppEvents : true,
-                        xfbml            : true,
-                        version          : 'v2.12'
-                      });
-                    };
-                    (function(d, s, id){
-                       var js, fjs = d.getElementsByTagName(s)[0];
-                       if (d.getElementById(id)) {return;}
-                       js = d.createElement(s); js.id = id;
-                       js.src = "https://connect.facebook.net/vi_VN/sdk.js";
-                       fjs.parentNode.insertBefore(js, fjs);
-                     }(document, 'script', 'facebook-jssdk'));
-                </script>
-                <div class="fb-customerchat"
-                    page_id="208499232664691"
-                    theme_color="#13cf13"
-                    logged_in_greeting="Bạn cần tư vấn sản phẩm làm đẹp. Bấm Trò Chuyện Ngay!"
-                    logged_out_greeting="Bạn cần tư vấn sản phẩm làm đẹp. Bấm Trò Chuyện Ngay!"
-                    ></div>
+                
             </body>
         </html>
         <!-- Dynamic page generated in 1.162 seconds. -->
