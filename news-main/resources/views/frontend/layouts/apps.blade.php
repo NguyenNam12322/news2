@@ -67,8 +67,8 @@
                 <link rel='stylesheet' id='google_font_roboto-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A500%2C400italic%2C700%2C900%2C500italic%2C400%2C300&#038;subset=vietnamese&#038;ver=4.9.22' type='text/css' media='all' />
                 <link rel='stylesheet' id='js_composer_front-css'  href='http://www.khoedep.vn/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.12.1' type='text/css' media='all' />
                 <link rel='stylesheet' id='td-theme-css'  href='{{ asset("wp-content/themes/Newspaper/style.css?ver=7.5")}}' type='text/css' media='all' />
-                <script type='text/javascript' src='./wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-                <script type='text/javascript' src='./wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+                <script type='text/javascript' src='{{ asset("wp-includes/js/jquery/jquery.js?ver=1.12.4")  }}'></script>
+                <script type='text/javascript' src='{{ asset("wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1")  }}.'></script>
                 <link rel='https://api.w.org/' href='./wp-json/' />
                 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd" />
                 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./wp-includes/wlwmanifest.xml" />
