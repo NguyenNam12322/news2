@@ -25,7 +25,7 @@
 
 
                 <!-- <link rel="pingback" href="http://www.khoedep.vn/xmlrpc.php" /> -->
-                <link rel="icon" type="image/png" href="http://static.khoedep.vn/2015/10/favicon.png">
+                <!-- <link rel="icon" type="image/png" href="http://static.khoedep.vn/2015/10/favicon.png"> -->
                 <!-- This site is optimized with the Yoast SEO plugin v11.9 - https://yoast.com/wordpress/plugins/seo/ -->
                 
                 <!-- <link rel="canonical" href="http://www.khoedep.vn/" /> -->
@@ -66,7 +66,7 @@
                 <link rel='stylesheet' id='google_font_open_sans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C400%2C600%2C700&#038;subset=vietnamese&#038;ver=4.9.22' type='text/css' media='all' />
                 <link rel='stylesheet' id='google_font_roboto-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A500%2C400italic%2C700%2C900%2C500italic%2C400%2C300&#038;subset=vietnamese&#038;ver=4.9.22' type='text/css' media='all' />
                 <link rel='stylesheet' id='js_composer_front-css'  href='http://www.khoedep.vn/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=4.12.1' type='text/css' media='all' />
-                <link rel='stylesheet' id='td-theme-css'  href='http://www.khoedep.vn/wp-content/themes/Newspaper/style.css?ver=7.5' type='text/css' media='all' />
+                <link rel='stylesheet' id='td-theme-css'  href='{{ asset("wp-content/themes/Newspaper/style.css?ver=7.5")}}' type='text/css' media='all' />
                 <script type='text/javascript' src='./wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
                 <script type='text/javascript' src='./wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
                 <link rel='https://api.w.org/' href='./wp-json/' />
@@ -770,7 +770,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="td-header-sp-top-widget">
+                                    <!-- <div class="td-header-sp-top-widget">
                                         <span class="td-social-icon-wrap">
                                         <a target="_blank" href="https://www.facebook.com/SucKhoeLamDep" title="Facebook">
                                         <i class="td-icon-font td-icon-facebook"></i>
@@ -806,7 +806,7 @@
                                         <i class="td-icon-font td-icon-youtube"></i>
                                         </a>
                                         </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <!-- LOGIN MODAL -->
                                 <div  id="login-form" class="white-popup-block mfp-hide mfp-with-anim">
@@ -857,14 +857,14 @@
                                 <div class="td-container td-header-row td-header-main-menu">
                                     <div id="td-header-menu" role="navigation">
                                         <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
-                                        <div class="td-main-menu-logo td-logo-in-header">
+                                       <!--  <div class="td-main-menu-logo td-logo-in-header">
                                             <a class="td-mobile-logo td-sticky-header" href="http://www.khoedep.vn/">
                                             <img class="td-retina-data" data-retina="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Mobile-Retina.png" src="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Mobile.png" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/>
                                             </a>
                                             <a class="td-header-logo td-sticky-header" href="http://www.khoedep.vn/">
                                             <img class="td-retina-data" data-retina="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Retina.png" src="http://static.khoedep.vn/2015/10/Logo-KhoeDep.png" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/>
                                             </a>
-                                        </div>
+                                        </div> -->
                                         <div class="menu-khoedep-header-container">
                                             <ul id="menu-khoedep-header-1" class="sf-menu">
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-38 current_page_item menu-item-first td-menu-item td-normal-menu menu-item-52"><a href="/">Trang Chủ</a></li>
@@ -934,7 +934,7 @@
                             <div class="td-container">
                                 <div class="td-pb-row">
                                     <div class="td-pb-span3">
-                                        <aside class="footer-logo-wrap"><a href="http://www.khoedep.vn/"><img class="td-retina-data" src="http://static.khoedep.vn/2015/10/Logo-KhoeDep.png" data-retina="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Retina.png" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/></a></aside>
+                                        <!-- <aside class="footer-logo-wrap"><a href="http://www.khoedep.vn/"><img class="td-retina-data" src="http://static.khoedep.vn/2015/10/Logo-KhoeDep.png" data-retina="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Retina.png" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/></a></aside> -->
                                     </div>
                                     <div class="td-pb-span9">
                                         <aside class="footer-text-wrap">
@@ -1073,11 +1073,11 @@
                     var click_object = {"ajax_url":"http:\/\/www.khoedep.vn\/wp-admin\/admin-ajax.php"};
                     /* ]]> */
                 </script>
-                <script type='text/javascript' src='http://www.khoedep.vn/wp-content/plugins/adrotate/library/jquery.adrotate.clicktracker.js'></script>
-                <script type='text/javascript' src='http://www.khoedep.vn/wp-content/themes/Newspaper/js/tagdiv_theme.js?ver=7.5'></script>
-                <script type='text/javascript' src='http://www.khoedep.vn/wp-includes/js/comment-reply.min.js?ver=4.9.22'></script>
-                <script type='text/javascript' src='http://www.khoedep.vn/wp-includes/js/wp-embed.min.js?ver=4.9.22'></script>
-                <script type='text/javascript' src='http://www.khoedep.vn/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.12.1'></script>
+                <script type='text/javascript' src='{{  asset("wp-content/plugins/adrotate/library/jquery.adrotate.clicktracker.js")}}'></script>
+                <script type='text/javascript' src='{{  asset("wp-content/themes/Newspaper/js/tagdiv_theme.js?ver=7.5")}}'></script>
+                <script type='text/javascript' src='{{  asset("wp-includes/js/comment-reply.min.js?ver=4.9.22")}}'></script>
+                <script type='text/javascript' src='{{  asset("wp-includes/js/wp-embed.min.js?ver=4.9.22")}}'></script>
+                <script type='text/javascript' src='{{  asset("wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.12.1")}}'></script>
                 <!-- JS generated by theme -->
                 <script>
                     (function(){
