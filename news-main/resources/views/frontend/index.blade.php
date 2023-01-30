@@ -44,7 +44,7 @@
                                                 <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/superset-la-gi/" rel="bookmark" title="Superset là gì? Kỹ thuật tăng cơ bắp nhanh nhất cho người tập gym">Superset là gì? Kỹ thuật tăng cơ bắp nhanh nhất cho người tập gym</a></h3>
                                             </div>
                                             <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-4 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/kem-duong-da-tay-tot-nhat/" rel="bookmark" title="Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng">Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng</a></h3>
+                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/kem-duong-da-tay-tot-nhat/" rel="bookmark" title="Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng">Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng </a></h3>
                                             </div>
                                         </div>
                                         <div class="td-next-prev-wrap"><a href="#"
