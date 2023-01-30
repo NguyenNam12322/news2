@@ -26,26 +26,28 @@
                                 block_td_uid_2_637ae31510b4b.max_num_pages = "520";
                                 tdBlocksArray.push(block_td_uid_2_637ae31510b4b);
                             </script>
+
+                            <?php 
+
+                                $featured = App\Models\post::where('active', 1)->where('featured', 1)->orderBy('id', 'asc')->take(4)->get();
+
+                            ?>
+
+
                             <div id=td_uid_2_637ae31510b4b class="td_block_inner">
                                 <div class="td-block-row">
                                     <div class="td-trending-now-wrapper" id="td_uid_2_637ae31510b4b" data-start="">
                                         <div class="td-trending-now-title">XEM NHIỀU NHẤT</div>
                                         <div class="td-trending-now-display-area">
+                                            @if($featured->count()>0)
+                                            @foreach($featured as $featureds)
                                             <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-0 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/4-kieu-toc-ngan-va-ngan-ngang-vai-lam-mua-lam-gio-nam-2016-cac-nang-khong-the-ngo-lo/" rel="bookmark" title="4 kiểu tóc ngắn và ngắn ngang vai “làm mưa làm gió” năm 2017">4 kiểu tóc ngắn và ngắn ngang vai “làm mưa làm gió” năm 2017</a></h3>
+                                                <h3 class="entry-title td-module-title"><a href="{{ route('details', $featureds->link) }}" rel="bookmark" title="{{ $featureds->title }}">{{ $featureds->title }}</a></h3>
                                             </div>
-                                            <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-1 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/bai-tap-yoga-chua-viem-xoang-hieu-qua/" rel="bookmark" title="6 bài tập Yoga chữa viêm xoang đơn giản hiệu quả ngay tại nhà">6 bài tập Yoga chữa viêm xoang đơn giản hiệu quả ngay tại nhà</a></h3>
-                                            </div>
-                                            <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-2 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/bai-tap-bap-chan-barbell-seated-calf-raise/" rel="bookmark" title="Bài tập bắp chân Barbell Seated Calf Raise giúp bắp chuối khủng">Bài tập bắp chân Barbell Seated Calf Raise giúp bắp chuối khủng</a></h3>
-                                            </div>
-                                            <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-3 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/superset-la-gi/" rel="bookmark" title="Superset là gì? Kỹ thuật tăng cơ bắp nhanh nhất cho người tập gym">Superset là gì? Kỹ thuật tăng cơ bắp nhanh nhất cho người tập gym</a></h3>
-                                            </div>
-                                            <div class="td_module_trending_now td-meta-info-hide td-trending-now-post-4 td-trending-now-post">
-                                                <h3 class="entry-title td-module-title"><a href="http://www.khoedep.vn/kem-duong-da-tay-tot-nhat/" rel="bookmark" title="Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng">Bật mí 6 kem dưỡng da tay tốt nhất cho đôi tay mềm mại mịn màng </a></h3>
-                                            </div>
+
+                                            @endforeach
+                                            @endif
+                                            
                                         </div>
                                         <div class="td-next-prev-wrap"><a href="#"
                                             class="td_ajax-prev-pagex td-trending-now-nav-left"
@@ -66,11 +68,7 @@
                             <div id=td_uid_3_637ae3151ab07 class="td_block_inner">
                                 <div class="td-big-grid-wrapper">
 
-                                    <?php 
-
-                                        $featured = App\Models\post::where('active', 1)->where('featured', 1)->orderBy('id', 'asc')->take(4)->get();
-
-                                    ?>
+                                   
                                     @if($featured->count()>0)
 
                                     <div class="td_module_mx5 td-animation-stack td-meta-info-hide td-big-grid-post-0 td-big-grid-post td-big-thumb">
