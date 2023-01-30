@@ -842,14 +842,14 @@
                                         </a>
                                     </h1>
                                 </div>
-                                <div class="td-header-sp-recs">
+                                <!-- <div class="td-header-sp-recs">
                                     <div class="td-header-rec-wrap">
                                         <div class="td-a-rec td-a-rec-id-header  ">
-                                            <!-- [adrotate group="3"]  -->
+                                            
                                             <a href="https://ifitness.vn/products/sua-tang-can-allmax-nutrition-quickmass-5-44kg?ref=thehinh&utm_source=thehinhcom&utm_medium=Banner&utm_campaign=Header&utm_content=QuickMassHeader" alt="Sữa Tăng Cân Allmax Nutrition Quickmass 5,44kg - 2 Mùi"  target="_blank"><img src="https://i.imgur.com/LUO0tcT.jpg"></a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="td-header-menu-wrap-full">
