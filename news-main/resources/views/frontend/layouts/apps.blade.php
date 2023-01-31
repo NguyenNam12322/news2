@@ -836,9 +836,10 @@
                         <div class="td-banner-wrap-full td-logo-wrap-full">
                             <div class="td-container td-header-row td-header-header">
                                 <div class="td-header-sp-logo">
-                                    <h1 class="td-logo">        <a class="td-main-logo" href="http://www.khoedep.vn/">
-                                        <img class="td-retina-data"  src="{{ asset('logo/Logo-KhoeDep.png') }}" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/>
-                                        <span class="td-visual-hidden">Khỏe Đẹp</span>
+                                    <h1 class="td-logo">        
+                                        <a class="td-main-logo" href="http://www.khoedep.vn/">
+                                            <!-- <img class="td-retina-data"  src="{{ asset('logo/Logo-KhoeDep.png') }}" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/> -->
+                                            <span class="td-visual-hidden">Khỏe Đẹp</span>
                                         </a>
                                     </h1>
                                 </div>
