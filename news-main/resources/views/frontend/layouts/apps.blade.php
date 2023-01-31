@@ -936,13 +936,7 @@
                                     <div class="td-pb-span3">
                                         <!-- <aside class="footer-logo-wrap"><a href="http://www.khoedep.vn/"><img class="td-retina-data" src="http://static.khoedep.vn/2015/10/Logo-KhoeDep.png" data-retina="http://static.khoedep.vn/2015/10/Logo-KhoeDep-Retina.png" alt="Sức Khỏe & Làm Đẹp" title="Sức Khỏe & Làm Đẹp"/></a></aside> -->
                                     </div>
-                                    <div class="td-pb-span9">
-                                        <aside class="footer-text-wrap">
-                                            <div class="block-title"><span>VỀ CHÚNG TÔI</span></div>
-                                            KhoeDep.vn là chuyên trang chia sẻ kiến thức miễn phí về Sức Khoẻ & Làm Đẹp. Chúng tôi hoạt động với sứ mệnh: TRUYỀN CẢM HỨNG & TẠO ĐỘNG LỰC nhằm mang đến cho mỗi người Việt Nam một SỨC KHOẺ & VẺ ĐẸP TOÀN DIỆN
-                                            <div class="footer-email-wrap">Liên hệ: <a href="mailto:cskh@khoedep.vn">cskh@khoedep.vn</a></div>
-                                        </aside>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -961,7 +955,7 @@
                                     </div>
                                 </div>
                                 <div class="td-pb-span5 td-sub-footer-copy">
-                                    &copy; KhoeDep.vn - Lưu ý: Tác dụng của phuơng pháp có thể thay đổi tùy theo tình trạng thể chất mỗi nguời                
+                                    &copy;  
                                 </div>
                             </div>
                         </div>
