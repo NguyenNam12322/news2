@@ -59,6 +59,28 @@ class categoryController extends AppBaseController
 
         $input['link'] = convertSlug($input['namecategory']);
 
+          //add meta seo cho product
+
+        $meta_title = $input['namecategory'];
+
+        $meta_content = $input['namecategory']; 
+
+        $meta_model = new metaSeo();
+
+        $meta_model->meta_title =$meta_title;
+
+        $meta_model->meta_content =$meta_content;
+
+        $meta_model->meta_og_content =$meta_content;
+
+        $meta_model->meta_og_title =$meta_title;
+
+        $meta_model->meta_key_words =$meta_title;
+
+        $meta_model->save();
+
+        $input['Meta_id'] = $meta_model['id'];
+
         $category = $this->categoryRepository->create($input);
 
         Flash::success('Category saved successfully.');

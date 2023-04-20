@@ -29,6 +29,10 @@ Route::post('login-Fe', 'AjaxController@loginClientsFe')->name('login-Fe');
 
 Route::get('logout-Fe', 'AjaxController@logout')->name('logout-Fe');
 
+Route::get("/test", function(){
+   return view("post");
+});
+
 Route::get('tim', 'productController@FindbyNameOrModelOfFrontend')->name('search-product-frontend');
 
 Route::get('/category/{slug}', 'Frontend\categoryController@index')->name('category-product');
